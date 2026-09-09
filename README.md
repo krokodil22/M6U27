@@ -12,3 +12,12 @@ npm run dev
 Откройте адрес, который напечатает Vite (обычно `http://localhost:5173`). Для production-сборки используйте `npm run build`.
 
 Прогресс сохраняется в `localStorage` текущего браузера. Кнопка «Сбросить прогресс» удаляет сохранение.
+
+## Публикация на GitHub Pages
+
+Workflow `.github/workflows/deploy-pages.yml` автоматически собирает и публикует
+приложение после отправки изменений в ветку `main` или `master`. В настройках
+репозитория **Settings → Pages → Build and deployment** выберите источник
+**GitHub Actions**. Сборка использует относительные пути к ресурсам, поэтому
+тренажёр корректно работает по адресу проекта вида
+`https://<user>.github.io/<repository>/`.
