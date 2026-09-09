@@ -21,3 +21,8 @@ Workflow `.github/workflows/deploy-pages.yml` автоматически соб�
 **GitHub Actions**. Сборка использует относительные пути к ресурсам, поэтому
 тренажёр корректно работает по адресу проекта вида
 `https://<user>.github.io/<repository>/`.
+
+Публиковать исходные файлы напрямую из ветки нельзя: браузер не умеет сам
+собирать зависимости Vite. Если в Network запрашивается `src/main.js`, а не
+файл из `assets`, проверьте, что источником Pages выбран **GitHub Actions**, и
+повторно запустите workflow **Deploy to GitHub Pages** на вкладке Actions.
