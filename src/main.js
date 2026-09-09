@@ -31,17 +31,11 @@ document.querySelector('#app').innerHTML=`
       </div>
 
       <div class="game-stage">
-        <div class="antenna" aria-hidden="true"><i></i></div>
-        <div class="console">
-          <div class="screen">
-            <div id="board" class="board"></div>
-          </div>
-          <div class="console-footer">
-            <div class="controls"><button data-move="0,-1">↑</button><div><button data-move="-1,0">←</button><button data-move="0,1">↓</button><button data-move="1,0">→</button></div></div>
-            <aside class="memory-panel"><div id="variables"></div></aside>
-            <button id="wipe" class="wipe" title="Сбросить весь прогресс">Сбросить прогресс</button>
-          </div>
-          <span class="console-button" aria-hidden="true"></span>
+        <div class="game-card">
+          <div id="board" class="board"></div>
+          <div class="controls"><button data-move="0,-1">↑</button><div><button data-move="-1,0">←</button><button data-move="0,1">↓</button><button data-move="1,0">→</button></div><small>Управляй стрелками</small></div>
+          <aside class="memory-panel"><div class="memory-heading"><b>ПЕРЕМЕННЫЕ</b><small>Память робота</small></div><div id="variables"></div></aside>
+          <button id="wipe" class="wipe" title="Сбросить весь прогресс">Сбросить прогресс</button>
         </div>
       </div>
     </section>
